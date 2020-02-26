@@ -1,0 +1,17 @@
+abc.com
+{
+#  root /srv/www
+#  proxy /ray v2ray:10000 {
+#      websocket
+#    header_upstream -Origin
+#}
+}
+
+0.0.0.0:81
+{
+  tls off
+  proxy /ray v2ray:10000 {
+      websocket
+    header_upstream -Origin
+}
+
