@@ -83,6 +83,32 @@ sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 ```
 
+## 安装Git用于克隆代码
+
+```
+Centos:
+yum install git
+
+Ubuntu:
+sudo apt-get install git
+```
+
+## 安装并使用TCP BBR 拥塞控制算法（可选）
+
+教程参考：https://zhuanlan.zhihu.com/p/73565142
+
+```
+wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" 
+chmod +x tcp.sh 
+./tcp.sh
+```
+
+## 下载源码
+
+```
+git clone https://github.com/maidoudouo/V2ray_Trojan_Docker
+```
+
 ## Setting
 
 ### 一键脚本设置
@@ -126,3 +152,5 @@ Enjoy it!
 ```
 docker-compose up -d
 ```
+
+Enjoy it!
