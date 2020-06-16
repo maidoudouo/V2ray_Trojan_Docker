@@ -1,30 +1,29 @@
 version: '3.6'
 services:
   caddy:
-    image: abiosoft/caddy
-    container_name: breakwall_caddy
+    image: caddy
+    container_name: breakwall_caddy2
     restart: always
-    environment:
-      - ACME_AGREE=true
     links:
       - v2ray:v2ray
     ports:
       - "80:80"
   #    - "443:443"
     volumes:
-      - ./caddy/Caddyfile:/etc/Caddyfile
-      - ./caddy/caddy_cert:/root/.caddy/acme/acme-v02.api.letsencrypt.org/sites
+      - ./caddy/Caddyfile:/etc/caddy/Caddyfile
+      - ./caddy/caddy_cert:/data/caddy/certificates/acme-v02.api.letsencrypt.org-directory
+      - ./caddy/caddy_config:/config
+      - ./caddy/www:/usr/share/caddy/
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
 
   v2ray:
     build: ./v2ray/
     container_name: breakwall_v2ray
     restart: always
     volumes:
-      - ./v2ray/config.json:/etc/v2ray/config.json
-#    depends_on:
-#    - caddy
-#    ports:
-#    - "10000:10000"
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
 
   trojan:
       build: ./trojan
@@ -36,6 +35,8 @@ services:
         - ./trojan/config:/config
         - ./caddy/caddy_cert:/trojan-cert
         - ./trojan/wait_for_caddy.sh:/wait_for_caddy.sh
+        - /etc/localtime:/etc/localtime:ro
+        - /etc/timezone:/etc/timezone:ro
       links:
         - caddy:caddy
       depends_on: 

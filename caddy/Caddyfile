@@ -1,17 +1,8 @@
-abc.com
-{
-#  root /srv/www
-#  proxy /ray v2ray:10000 {
-#      websocket
-#    header_upstream -Origin
-#}
+abc.com {
 }
 
-0.0.0.0:81
-{
-  tls off
-  proxy /ray v2ray:10000 {
-      websocket
-    header_upstream -Origin
+:81 {
+    root * /usr/share/caddy
+    file_server
+    reverse_proxy /ray v2ray:10000
 }
-
