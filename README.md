@@ -35,14 +35,18 @@ wget -P /etc/yum.repos.d/ https://download.docker.com/linux/centos/docker-ce.rep
 # 安装docker ce
 yum install -y docker-ce
 
+# 启动、开机启动
+systemctl start docker
+systemctl enable docker
+```
+
+当然如果你想指定版本安装docker也是可以的
+
+```
 # 用下面的命令可以查看可以安装的版本
 yum list docker-ce --showduplicates | sort -r
 # 安装指定版本的Docker
 yum install -y docker-ce-18.03.0.ce-1.el7.centos
-
-# 启动、开机启动
-systemctl start docker
-systemctl enable docker
 ```
 
 ### Ubuntu
@@ -78,7 +82,7 @@ sudo apt-get install docker-ce
 
 ## 安装Docker Compose（容器编排工具）
 ```
-sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+sudo curl -L https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 ```
