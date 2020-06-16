@@ -157,4 +157,12 @@ Enjoy it!
 docker-compose up -d
 ```
 
-Enjoy it!
+
+
+## 网站配置
+
+应网友需求，如果需要部署静态网站替换掉Caddy的默认页，只需要将网站放入caddy/www里面即可
+
+
+
+**Enjoy it!**
