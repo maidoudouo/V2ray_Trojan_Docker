@@ -22,6 +22,7 @@ services:
     container_name: breakwall_v2ray
     restart: always
     volumes:
+      - ./v2ray/config.json:/etc/v2ray/config.json
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
 
