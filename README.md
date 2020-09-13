@@ -116,8 +116,10 @@ Enjoy it!
 ```
 同时会保存信息到info.txt中方便查阅
 
+
 ### 手动设置
 
+```
 0、centos安装vim
 
 yum -y install vim*
@@ -133,6 +135,8 @@ cd /root/V2ray_Trojan_Docker/v2ray && vim config.json
 3、在./trojan/config/config.json中修改Trojan的密码等配置
 
 cd /root/V2ray_Trojan_Docker/trojan-go/config && vim config.json
+```
+
 
 ## 构建
 ```
