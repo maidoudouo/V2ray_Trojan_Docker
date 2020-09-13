@@ -1,6 +1,6 @@
 # Breakwall 
 
-# 原项目切换为 Tojan-go 仅测试
+# Trojan 切换为 Tojan-go 仅测试
 
 这个项目是用于快速地使用Docker搭建breakwall服务
 
@@ -156,7 +156,7 @@ cd /root/V2ray_Trojan_Docker/v2ray && vim config.json
 
 3、在./trojan/config/config.json中修改Trojan的密码和证书路径里面的域名（共4个地方）
 
-cd /root/V2ray_Trojan_Docker/trojan/config && vim config.json
+cd /root/V2ray_Trojan_Docker/trojan-go/config && vim config.json
 
 ## 构建
 ```
