@@ -1,6 +1,8 @@
 # Breakwall 
 
-# Trojan 切换为 Tojan-go 仅测试
+## Fork原项目后 Trojan 切换为 Tojan-go 仅供测试
+
+### 仅centos ，其它平台自行查询相关命令。
 
 这个项目是用于快速地使用Docker搭建breakwall服务
 
@@ -51,36 +53,6 @@ yum list docker-ce --showduplicates | sort -r
 yum install -y docker-ce-18.03.0.ce-1.el7.centos
 ```
 
-### Ubuntu
-
-```
-sudo apt-get update
-sudo apt-get install docker.io
-```
-
-或者
-
-```
-# 更新Ubuntu的apt源索引
-sudo apt-get update
-
-# 安装包允许apt通过HTTPS使用仓库
-sudo dpkg --configure -a
-sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
-
-# 添加Docker官方GPG key
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-
-# 设置Docker稳定版仓库
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-
-# 更新apt源索引
-sudo apt-get update
-
-# 安装最新版本Docker CE（社区版）
-sudo apt-get install docker-ce
-```
-
 
 ## 安装Docker Compose（容器编排工具）
 ```
@@ -94,9 +66,6 @@ docker-compose --version
 ```
 Centos:
 yum install git
-
-Ubuntu:
-sudo apt-get install git
 ```
 
 ## 安装并使用TCP BBR 拥塞控制算法（可选）
@@ -104,9 +73,8 @@ sudo apt-get install git
 教程参考：https://zhuanlan.zhihu.com/p/73565142
 
 ```
-wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" 
-chmod +x tcp.sh 
-./tcp.sh
+推荐BBRplus
+wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
 ```
 
 ## 下载源码
@@ -148,13 +116,19 @@ Enjoy it!
 
 ### 手动设置
 
+0、centos安装vim
+
+yum -y install vim*
+
 1、在./caddy/Caddyfile中修改Caddy修改域名
 
-2、在./v2ray/config.json中修改V2Ray的UUID
+cd /root/V2ray_Trojan_Docker/caddy && vim Caddyfile
+
+2、在./v2ray/config.json中修改V2Ray的UUID等配置
 
 cd /root/V2ray_Trojan_Docker/v2ray && vim config.json
 
-3、在./trojan/config/config.json中修改Trojan的密码和证书路径里面的域名（共4个地方）
+3、在./trojan/config/config.json中修改Trojan的密码等配置
 
 cd /root/V2ray_Trojan_Docker/trojan-go/config && vim config.json
 
