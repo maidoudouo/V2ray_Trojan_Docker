@@ -154,7 +154,7 @@ docker-compose up -d
 docker stop breakwall_trojan-go breakwall_v2ray
 移除容器
 docker rm breakwall_trojan-go breakwall_v2ray
-查看容器
+查看容器状况
 docker ps -a
 重新构建
 docker-compose up -d
