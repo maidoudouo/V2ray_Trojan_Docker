@@ -21,11 +21,11 @@ fi
 
 rm -rf ./caddy/Caddyfile
 rm -rf ./v2ray/config.json
-rm -rf ./trojan/config/config.json
+rm -rf ./trojan-go/config/config.json
 
 cp ./caddy/Caddyfile.raw ./caddy/Caddyfile
 cp ./v2ray/config.json.raw ./v2ray/config.json
-cp ./trojan/config/config.json.raw ./trojan/config/config.json
+cp ./trojan-go/config/config.json.raw ./trojan-go/config/config.json
 
 read -p "Please input your server domain name(eg: abc.com): " domainName
 
@@ -35,7 +35,7 @@ if [ "$domainName" = "" ];then
 else
 	echo "Your domain name is: "$domainName
 	sed -i "s/abc.com/$domainName/g" ./caddy/Caddyfile
-	sed -i "s/abc.com/$domainName/g" ./trojan/config/config.json
+	sed -i "s/abc.com/$domainName/g" ./trojan-go/config/config.json
 fi
 
 sys=$(uname)
@@ -49,7 +49,7 @@ fi
 
 trojan_password=${uuid: -12}
 sed -i "s/98bc7998-8e06-4193-84d2-38f2e10ee763/$uuid/g" ./v2ray/config.json
-sed -i "s/38f2e10ee763/$trojan_password/g" ./trojan/config/config.json
+sed -i "s/38f2e10ee763/$trojan_password/g" ./trojan-go/config/config.json
 
 echo "-----------------------------------------------"
 echo "V2ray Configuration:"
