@@ -2,10 +2,7 @@ abc.com {
 }
 
 :81 {
-    gzip
-    proxy / https://baidu.com
-    proxy /ray 127.0.0.1:10000 {
-    websocket
-    header_upstream -Origin
-  }
+    encode gzip
+    reverse_proxy * https://baidu.com
+    reverse_proxy /ray 127.0.0.1:10000
 }
