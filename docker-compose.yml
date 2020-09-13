@@ -33,9 +33,9 @@ services:
       ports:
         - "443:443"
       volumes:
-        - ./trojan-go/config:/config
+        - ./trojan/config:/config
         - ./caddy/caddy_cert:/trojan-cert
-        - ./trojan-go/wait_for_caddy.sh:/wait_for_caddy.sh
+        - ./trojan/wait_for_caddy.sh:/wait_for_caddy.sh
         - /etc/localtime:/etc/localtime:ro
         - /etc/timezone:/etc/timezone:ro
       links:
