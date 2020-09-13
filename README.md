@@ -139,8 +139,19 @@ cd /root/V2ray_Trojan_Docker/trojan-go/config && vim config.json
 docker-compose up -d
 ```
 
-
-
+## 核心程序更新
+```
+停止容器
+docker stop breakwall_trojan-go breakwall_v2ray
+移除容器
+docker rm breakwall_trojan-go breakwall_v2ray
+查看容器
+docker ps -a
+重新构建
+docker-compose up -d
+重启docker
+systemctl restart docker
+```
 ## 网站配置
 
 ```
