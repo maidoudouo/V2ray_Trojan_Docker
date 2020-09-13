@@ -2,7 +2,7 @@
   "inbound": {
     "port": 10000,
     "listen":"0.0.0.0",
-    "protocol": "vmess",
+    "protocol": "vless",
     "settings": {
       "clients": [
         {
