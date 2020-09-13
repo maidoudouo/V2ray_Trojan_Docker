@@ -1,10 +1,11 @@
 abc.com {
-    gzip
-    proxy / https://baidu.com
 }
 
 :81 {
-    root * /usr/share/caddy
-    file_server
-    reverse_proxy /ray v2ray:10000
+    gzip
+    proxy / https://baidu.com
+    proxy /ray 127.0.0.1:10000 {
+    websocket
+    header_upstream -Origin
+  }
 }
