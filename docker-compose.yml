@@ -28,7 +28,7 @@ services:
 
   trojan:
       build: ./trojan-go
-      container_name: breakwall_trojan
+      container_name: breakwall_trojan-go
       restart: always
       ports:
         - "443:443"
