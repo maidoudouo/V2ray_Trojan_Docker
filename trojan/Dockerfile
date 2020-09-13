@@ -14,9 +14,9 @@ RUN apk add --no-cache --virtual .build-deps \
 
 RUN /tmp/get_trojan.sh
 
-RUN (cd trojan && cmake . && make -j $(nproc) && strip -s trojan \
-    && mv trojan /usr/local/bin) \
-    && rm -rf trojan \
+RUN (cd trojan-go && cmake . && make -j $(nproc) && strip -s trojan-go \
+    && mv trojan-go /usr/local/bin) \
+    && rm -rf trojan-go \
     && apk del .build-deps \
     && apk add --no-cache --virtual .trojan-rundeps \
         libstdc++ \
