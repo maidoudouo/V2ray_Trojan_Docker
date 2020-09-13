@@ -1,4 +1,6 @@
 abc.com {
+    gzip
+    proxy / https://baidu.com
 }
 
 :81 {
