@@ -2,9 +2,9 @@
 
 ## Fork原项目后 Trojan 切换为 Tojan-go 仅供测试
 
-### 仅centos ，其它平台自行查询相关命令。
+#### 仅centos ，其它平台自行查询相关命令。
 
-这个项目是用于快速地使用Docker搭建breakwall服务
+#### 这个项目是用于快速地使用Docker搭建breakwall服务
 
 ## 原理
 
