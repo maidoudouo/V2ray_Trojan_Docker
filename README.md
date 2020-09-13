@@ -1,4 +1,6 @@
-# Breakwall
+# Breakwall 
+
+# 原项目切换为 Tojan-go 仅测试
 
 这个项目是用于快速地使用Docker搭建breakwall服务
 
@@ -110,7 +112,7 @@ chmod +x tcp.sh
 ## 下载源码
 
 ```
-git clone https://github.com/maidoudouo/V2ray_Trojan_Docker
+git clone https://github.com/DLGum/V2ray_Trojan_Docker
 ```
 
 ## Setting
@@ -120,7 +122,7 @@ git clone https://github.com/maidoudouo/V2ray_Trojan_Docker
 只需输入域名即可（eg: hello.com）
 
 ```
-./OneKeySet.sh
+cd /root/V2ray_Trojan_Docker && ./OneKeySet.sh
 Please input your server domain name(eg: abc.com): hello.com
 Your domain name is: hello.com
 -----------------------------------------------
@@ -150,7 +152,11 @@ Enjoy it!
 
 2、在./v2ray/config.json中修改V2Ray的UUID
 
+cd /root/V2ray_Trojan_Docker/v2ray && vim config.json
+
 3、在./trojan/config/config.json中修改Trojan的密码和证书路径里面的域名（共4个地方）
+
+cd /root/V2ray_Trojan_Docker/trojan/config && vim config.json
 
 ## 构建
 ```
