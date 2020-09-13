@@ -84,6 +84,11 @@ wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-
 ```
 git clone https://github.com/DLGum/V2ray_Trojan_Docker
 ```
+```
+如果是从原项目切换过来先运行
+rm -rf /root/V2ray_Trojan_Docker
+再git源码
+```
 
 ## Setting
 
