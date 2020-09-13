@@ -1,6 +1,6 @@
-# Breakwall 
+# Breakwall  Trojan go 与 v2ray vmess+ws+tls 共存
 
-## Fork原项目后 Trojan 切换为 Tojan-go 仅供测试
+### Fork原项目后 Trojan 切换为 Tojan-go 仅供测试
 
 #### 仅centos ，其它平台自行查询相关命令。
 
@@ -120,7 +120,7 @@ Enjoy it!
 
 yum -y install vim*
 
-1、在./caddy/Caddyfile中修改Caddy修改域名
+1、在./caddy/Caddyfile中修改Caddy修改域名等
 
 cd /root/V2ray_Trojan_Docker/caddy && vim Caddyfile
 
@@ -141,8 +141,8 @@ docker-compose up -d
 
 ## 网站配置
 
+```
 应网友需求，如果需要部署静态网站替换掉Caddy的默认页，只需要将网站放入caddy/www里面即可
-
-
+```
 
 **Enjoy it!**
