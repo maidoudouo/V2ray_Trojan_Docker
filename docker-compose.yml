@@ -27,15 +27,15 @@ services:
       - /etc/timezone:/etc/timezone:ro
 
   trojan:
-      build: ./trojan
+      build: ./trojan-go
       container_name: breakwall_trojan
       restart: always
       ports:
         - "443:443"
       volumes:
-        - ./trojan/config:/config
+        - ./trojan-go/config:/config
         - ./caddy/caddy_cert:/trojan-cert
-        - ./trojan/wait_for_caddy.sh:/wait_for_caddy.sh
+        - ./trojan-go/wait_for_caddy.sh:/wait_for_caddy.sh
         - /etc/localtime:/etc/localtime:ro
         - /etc/timezone:/etc/timezone:ro
       links:
