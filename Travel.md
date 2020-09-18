@@ -13,6 +13,7 @@ ss/v2慢慢变得不好用？掉速断流？
 ```
 ```
 别的不说白嫖车先送两个
+第一个白嫖聚合尤其变态强大。
 https://github.com/zu1k/proxypool
 https://github.com/selierlin/Share-SSR-V2ray
 ```
