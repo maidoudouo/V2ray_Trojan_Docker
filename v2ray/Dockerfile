@@ -1,7 +1,7 @@
 FROM ubuntu:19.10 as builder
 
 RUN apt-get update
-RUN apt-get install curl init -y
+RUN apt-get install curl unzip init -y
 RUN curl -L -o /tmp/go.sh https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh
 RUN chmod +x /tmp/go.sh
 RUN /tmp/go.sh
