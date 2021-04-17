@@ -2,6 +2,8 @@
 
 这个项目是用于快速地使用Docker搭建breakwall服务
 
+**这个项目已经过时，请移步到[基于XRay的新项目](https://github.com/maidoudouo/XRay_Trojan_Docker)**
+
 ## 原理
 
 ### 443端口复用方法
