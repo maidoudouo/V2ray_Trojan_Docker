@@ -22,7 +22,8 @@
         "session_timeout": 600,
         "plain_http_response": "",
         "curves": "",
-        "dhparam": ""
+        "dhparam": "",
+        "cert_check_rate": 1
     },
     "tcp": {
         "no_delay": true,
